@@ -3,13 +3,14 @@
 //#include "inFile.h"
 //#include "outFile.h"
 #include <string>
-//made by contemplativa
+//made by haydie
+
 bool isDigit(std::string string);
 bool convert(std::string string, int &to, bool(*func)(std::string));
 int main(int argc, char* argv[]){
     int size = 0, number = 0;
     std::string stringSize;
-    char type;
+    char type, order;
     bool check;
     std::cout << "made by contemplativa\n";
     do{
@@ -34,6 +35,16 @@ int main(int argc, char* argv[]){
     }while(type != 'b' && type != 's');
 
     do{
+        std::cout << "Order of sorting:\n";
+        std::cout << "'a' for ascending\n";
+        std::cout << "'d' for descending\n";
+        std::cin >> order;
+        if(order != 'a' || order != 'd'){
+            std::cout << "Type must be 'a' or 'd'. Please try again.\n";
+        }
+    }while(order != 'a' && order != 'd');
+
+    do{
         for(int i = 0; i < size; i++){
         std::cout << "Enter a number: ";
         std::cin >> pN[i];
@@ -46,7 +57,15 @@ int main(int argc, char* argv[]){
     }
     std::cout << "\n";
     //test 1
+
+    //Creating a sorting object
+    Sorting s;
+    switch(type){
+        case 'b': s.bubble(pN, size, order); break;
+        case 's': s.selection(pN, size, order); break;
+    }
 }
+
 
 bool isDigit(std::string string){
     char nums[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
