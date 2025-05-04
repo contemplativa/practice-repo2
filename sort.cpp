@@ -1,16 +1,24 @@
 #include <iostream>
 #include "sorting.h"
-#include "inFile.h"
-#include "outFile.h"
+//#include "inFile.h"
+//#include "outFile.h"
+#include <string>
+bool isDigit(std::string string, int &size);
 
 int main(int argc, char* argv[]){
     int size = 0, number = 0;
+    std::string stringSize;
     char type;
+    bool check;
     std::cout << "contemplativa\n";
     do{
     std::cout << "Number Sorting Algorithms";
     std::cout << "Size of array: ";
-    std::cin >> size;
+    std::cin >> stringSize;
+    check = isDigit(stringSize);
+    std::cout << check << "\n";
+    std::exit(1);
+
     }while(size < 0);
     int* pN = new int[size];
 
@@ -37,4 +45,26 @@ int main(int argc, char* argv[]){
     }
     std::cout << "\n";
     //test 1
+}
+
+bool isDigit(std::string string){
+    char nums[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
+    bool digit = false;
+    int arraySize = sizeof(nums)/sizeof(nums[0]);
+    for(int i = 0; i < string.length(); i++){
+        for(int j = 0; j < arraySize; j++){
+            if(string.at(i) == nums[j]){
+                digit = true;
+                break;
+            }
+            else{
+                if(j == arraySize-1){
+                    return false;
+                    break;
+                }
+                continue;
+            }
+        }
+    }
+    return digit;
 }
