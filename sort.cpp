@@ -4,7 +4,7 @@
 //#include "outFile.h"
 #include <string>
 bool isDigit(std::string string);
-bool convert(std::string string, bool(*func)(std::string));
+bool convert(std::string string, int &to, bool(*func)(std::string));
 int main(int argc, char* argv[]){
     int size = 0, number = 0;
     std::string stringSize;
@@ -30,7 +30,7 @@ int main(int argc, char* argv[]){
         if(type != 'b' || type != 's'){
             std::cout << "Type must be 'b' or 's'. Please try again.\n";
         }
-    }while(type != 'b' || type != 's');
+    }while(type != 'b' && type != 's');
 
     do{
         for(int i = 0; i < size; i++){

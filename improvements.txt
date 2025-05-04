@@ -2,8 +2,10 @@
     
     1. [10-16] prevent error when user enters a non-number type. 
                provide a limit for the size of the array
+    STATUS: almost done!
 
     2. [27-32] prevent error when user also enters a non-number type.
+    STATUS:
 
     3. [header files] fix inFile and outFile header files later
-
+    STATUS:
