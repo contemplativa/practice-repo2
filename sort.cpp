@@ -4,7 +4,7 @@
 #include "outFile.h"
 
 int main(int argc, char* argv[]){
-    int size = 0;
+    int size = 0, number = 0;
     char type;
 
     do{
@@ -23,4 +23,18 @@ int main(int argc, char* argv[]){
             std::cout << "Type must be 'b' or 's'. Please try again.\n";
         }
     }while(type != 'b' || type != 's');
+
+    do{
+        for(int i = 0; i < size; i++){
+        std::cout << "Enter a number: ";
+        std::cin >> pN[i];
+        size--;
+        }
+    }while(size != 0);
+    //test 1 [34]: pN Array
+    for(int i = 0; i < size; i++){
+    std::cout << pN[i] << " ";
+    }
+    std::cout << "\n";
+    //test 1
 }
