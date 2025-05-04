@@ -2,9 +2,7 @@
 #define SORTING_H
 class Sorting{
 public:
-    void ownSort(int arr[], int size){
-
-    }
+    void ownSort(vector<int> nums, int size, char order);
 };
 
 #endif

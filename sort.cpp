@@ -24,7 +24,7 @@ int main(int argc, char* argv[]){
     }while(size < 0 || !check);
     int* pN = new int[size];
 
-    do{
+   /* do{
         std::cout << "Sorting Algorithm to use\n";
         std::cout << "'b' for bubble sort\n";
         std::cout << "'s' for selection sort\n";
@@ -32,7 +32,7 @@ int main(int argc, char* argv[]){
         if(type != 'b' || type != 's'){
             std::cout << "Type must be 'b' or 's'. Please try again.\n";
         }
-    }while(type != 'b' && type != 's');
+    }while(type != 'b' && type != 's');*/
 
     do{
         std::cout << "Order of sorting:\n";
@@ -60,7 +60,7 @@ int main(int argc, char* argv[]){
 
     //Creating a sorting object
     Sorting s;
-    s.ownSort(pN, size, order); break;
+    s.ownSort(pN, size, order);
 }
 
 
