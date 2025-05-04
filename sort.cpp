@@ -4,7 +4,7 @@
 //#include "outFile.h"
 #include <string>
 bool isDigit(std::string string);
-
+bool convert(std::string string, int &to, bool(*func)(std::string));
 int main(int argc, char* argv[]){
     int size = 0, number = 0;
     std::string stringSize;
@@ -15,11 +15,11 @@ int main(int argc, char* argv[]){
     std::cout << "Number Sorting Algorithms";
     std::cout << "Size of array: ";
     std::cin >> stringSize;
-    check = isDigit(stringSize);
-    std::cout << check << "\n";
-    std::exit(1);
-
-    }while(size < 0);
+    check = convert(stringSize, size, isDigit);
+    if(size < 0){
+        std::cout << "Size must be greater than 0.\n";
+    }
+    }while(size < 0 || !check);
     int* pN = new int[size];
 
     do{
@@ -30,7 +30,7 @@ int main(int argc, char* argv[]){
         if(type != 'b' || type != 's'){
             std::cout << "Type must be 'b' or 's'. Please try again.\n";
         }
-    }while(type != 'b' || type != 's');
+    }while(type != 'b' && type != 's');
 
     do{
         for(int i = 0; i < size; i++){
@@ -83,4 +83,16 @@ bool isDigit(std::string string){
     //message
     //std::cout << "digit has been returned: " << digit << "\n";
     return digit;
+}
+
+bool convert(std::string string, int &to, bool(*func)(std::string)){
+    bool check = func(string);
+    if (check){
+        to = std::stoi(string);
+        return check;
+    }
+    else{
+        std::cout << "It's not an integer. Please try again.\n";
+        return check;
+    }
 }
