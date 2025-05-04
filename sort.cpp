@@ -11,7 +11,7 @@ int main(int argc, char* argv[]){
     std::string stringSize;
     char type;
     bool check;
-    std::cout << "contemplativa\n";
+    std::cout << "made by contemplativa\n";
     do{
     std::cout << "Number Sorting Algorithms";
     std::cout << "Size of array: ";
