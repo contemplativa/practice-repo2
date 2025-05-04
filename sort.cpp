@@ -12,6 +12,7 @@ int main(int argc, char* argv[]){
     std::string stringSize;
     char type;
     bool check;
+
     std::cout << "made by contemplativa\n";
     do{
     std::cout << "Number Sorting Algorithms";
