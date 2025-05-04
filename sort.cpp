@@ -1,7 +1,9 @@
 #include <iostream>
+#include "sorting.h"
 int main(int argc, char* argv[]){
     int size = 0;
     char type;
+
     do{
     std::cout << "Number Sorting Algorithms";
     std::cout << "Size of array: ";
