@@ -5,3 +5,5 @@
 
     2. [27-32] prevent error when user also enters a non-number type.
 
+    3. [header files] fix inFile and outFile header files later
+

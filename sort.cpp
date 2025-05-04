@@ -3,7 +3,7 @@
 //#include "inFile.h"
 //#include "outFile.h"
 #include <string>
-bool isDigit(std::string string, int &size);
+bool isDigit(std::string string);
 
 int main(int argc, char* argv[]){
     int size = 0, number = 0;
