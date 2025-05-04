@@ -1,9 +1,8 @@
 #include "sorting.h"
 
 // sorting class
-void Sorting::bubble(){
-
+void Sorting::bubble(int arr[], int size, char order){
 }
-void Sorting::selection(){
-    
+void Sorting::selection(int arr[], int size, char order){
+
 }

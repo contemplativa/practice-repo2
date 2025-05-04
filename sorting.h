@@ -2,9 +2,9 @@
 #define SORTING_H
 class Sorting{
 public:
-    void bubble();
+    void bubble(int arr[], int size, char order);
     
-    void selection();
+    void selection(int arr[], int size, char order);
 };
 
 #endif
