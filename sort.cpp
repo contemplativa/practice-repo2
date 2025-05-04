@@ -60,10 +60,7 @@ int main(int argc, char* argv[]){
 
     //Creating a sorting object
     Sorting s;
-    switch(type){
-        case 'b': s.bubble(pN, size, order); break;
-        case 's': s.selection(pN, size, order); break;
-    }
+    s.ownSort(pN, size, order); break;
 }
 
 
