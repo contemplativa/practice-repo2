@@ -1,5 +1,8 @@
 #include <iostream>
 #include "sorting.h"
+#include "inFile.h"
+#include "outFile.h"
+
 int main(int argc, char* argv[]){
     int size = 0;
     char type;
