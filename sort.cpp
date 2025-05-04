@@ -6,7 +6,7 @@
 int main(int argc, char* argv[]){
     int size = 0, number = 0;
     char type;
-
+    std::cout << "contemplativa\n";
     do{
     std::cout << "Number Sorting Algorithms";
     std::cout << "Size of array: ";
