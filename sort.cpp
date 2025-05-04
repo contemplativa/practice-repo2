@@ -3,7 +3,8 @@
 //#include "inFile.h"
 //#include "outFile.h"
 #include <string>
-//made by hayden
+//made by contemplativa
+
 bool isDigit(std::string string);
 bool convert(std::string string, int &to, bool(*func)(std::string));
 int main(int argc, char* argv[]){
